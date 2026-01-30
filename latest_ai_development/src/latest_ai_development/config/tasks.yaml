@@ -1,0 +1,91 @@
+
+
+# Phase 1: Research & Core Content Creation
+research_and_reporting_task:
+  description: >
+    Conduct comprehensive research on {topic} and transform findings into a detailed report.
+    Focus on gathering credible information from authoritative sources and structuring it into
+    clear, actionable insights with proper citations and data points.
+  expected_output: >
+    A complete research report with:
+    1. Executive summary of key findings
+    2. Detailed analysis sections with supporting data
+    3. Credible sources and references
+    4. Actionable insights and recommendations
+    Formatted as clean markdown without '```' code blocks.
+  agent: researcher
+
+# Phase 2: Multi-Format Content Development
+content_strategy_task:
+  description: >
+    Using the research report, create a comprehensive content package that includes:
+    1. SEO-optimized web articles with keyword research
+    2. Platform-specific social media content calendar
+    3. Marketing copy for different channels (website, email, ads)
+    4. Content distribution strategy with timing and targeting
+  expected_output: >
+    Complete content strategy package containing:
+    • 3-5 SEO articles (800-1500 words each) with meta descriptions
+    • 2-week social media calendar with 15+ platform-specific posts
+    • Marketing copy variations for different audiences
+    • Distribution plan with channel-specific best practices
+    Formatted as clean markdown without '```'.
+  agent: content_strategist
+  context: [research_and_reporting_task]
+
+# Phase 3: Visual Content Creation (Parallel to Phase 4)
+visual_content_task:
+  description: >
+    Based on the research report and content strategy, create compelling visual assets including:
+    1. Data visualizations and infographics summarizing key insights
+    2. Social media graphics optimized for different platforms
+    3. Simple animated sequences (GIFs/motion graphics) for digital use
+    4. Visual style guide ensuring brand consistency
+  expected_output: >
+    Visual content package containing:
+    • 3-5 infographics with data visualizations
+    • 10+ social media graphics with specifications
+    • 2-3 animated sequence concepts with descriptions
+    • Visual style guide with color, typography, and layout guidelines
+    Formatted as clean markdown without '```'.
+  agent: visual_producer
+  context: [research_and_reporting_task, content_strategy_task]
+
+# Phase 4: Multimedia Production (Parallel to Phase 3)
+multimedia_production_task:
+  description: >
+    Using the research report and content strategy, produce engaging multimedia content:
+    1. Script for a 2-3 minute explainer video with storyboard
+    2. Podcast episode outline and script (15-20 minutes)
+    3. Audio summary for key findings (1-2 minutes)
+    4. Video concept for social media shorts (15-30 seconds each)
+  expected_output: >
+    Multimedia production package containing:
+    • Complete video script with scene descriptions and timing
+    • Storyboard with visual frames and dialogue
+    • Podcast episode script with segments and talking points
+    • Audio summary script with narration notes
+    • Social media video concepts with hooks and key messages
+    Formatted as clean markdown without '```'.
+  agent: multimedia_producer
+  context: [research_and_reporting_task, content_strategy_task]
+
+# Phase 5: Final Integration & Quality Assurance
+campaign_integration_task:
+  description: >
+    Integrate all created content into a unified marketing campaign with:
+    1. Cross-channel content synchronization plan
+    2. Performance metrics and KPIs for each content type
+    3. Timeline for coordinated rollout across all platforms
+    4. Quality checklist ensuring consistency and brand alignment
+    5. Recommendations for optimization based on content performance
+  expected_output: >
+    Final campaign integration document containing:
+    • Unified content calendar with all assets mapped
+    • Channel-specific performance metrics and goals
+    • Rollout timeline with dependencies and milestones
+    • Quality assurance checklist for all content types
+    • Optimization recommendations and next steps
+    Formatted as clean markdown without '```'.
+  agent: content_strategist  # Reusing this agent for final integration
+  context: [content_strategy_task, visual_content_task, multimedia_production_task]

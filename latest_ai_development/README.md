@@ -33,11 +33,11 @@ It functions like an **AI marketing and media department** working together in s
 | **Content Strategist**  | Content Planner     | Converts research into structured content strategies                    |
 | **Visual Producer**     | Design Thinker      | Creates ideas for visual content (graphics, infographics, posts)        |
 | **Multimedia Producer** | Media Creator       | Develops video, podcast, and multimedia concepts                        |
-| 📢 **Campaign Integrator** | Campaign Planner    | Combines all outputs into a unified content campaign                    |
+| **Campaign Integrator** | Campaign Planner    | Combines all outputs into a unified content campaign                    |
 
 ---
 
-## 🔄 Workflow Pipeline
+## Workflow Pipeline
 
 The system runs in a **sequential process**, where each task builds on the previous one:
 
@@ -57,7 +57,7 @@ Each agent receives context from earlier tasks, allowing for intelligent collabo
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 latest-ai-development/
@@ -65,6 +65,8 @@ latest-ai-development/
 ├── config/
 │   ├── agents.yaml        # Agent personalities, goals, and backstories
 │   └── tasks.yaml         # Task instructions and expected outputs
+├──tools/  
+|   └──custom_tool.py      # Clear description for what tool is useful for  
 │
 ├── main.py                # Entry point to run the Crew
 ├── crew.py                # Crew and agent definitions
@@ -73,7 +75,7 @@ latest-ai-development/
 
 ---
 
-## ⚙️ Technologies Used
+## Technologies Used
 
 * **Python**
 * **CrewAI** – Multi-agent orchestration
@@ -82,7 +84,7 @@ latest-ai-development/
 
 ---
 
-## 🛠 Installation
+## Installation
 
 Clone the repository:
 
@@ -99,7 +101,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🔑 Environment Variables
+## Environment Variables
 
 This project uses tools that require API keys.
 
@@ -112,7 +114,7 @@ SERPER_API_KEY=your_serper_key
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 ```bash
 python main.py
@@ -129,17 +131,17 @@ All outputs will be printed in the console (or logged depending on your setup).
 
 ---
 
-## 🧩 Key Features
+## Key Features
 
-✔ Multi-agent collaboration
-✔ Task dependency handling
-✔ Context sharing between agents
-✔ Web-enabled AI research
-✔ Automated campaign creation
+* Multi-agent collaboration
+* Task dependency handling
+* Context sharing between agents
+* Web-enabled AI research
+* Automated campaign creation
 
 ---
 
-## 🌍 Use Cases
+## Use Cases
 
 * AI news content automation
 * Social media campaign planning
@@ -149,7 +151,7 @@ All outputs will be printed in the console (or logged depending on your setup).
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 * Export results to Notion or Google Docs
 * Auto-generate images using AI image models
@@ -159,16 +161,10 @@ All outputs will be printed in the console (or logged depending on your setup).
 
 ---
 
-## 👤 Author
+## Author
 
 **Daniel Alli**
 AI Systems Builder | Multi-Agent Automation Enthusiast
 Focused on AI-powered productivity, trading systems, and intelligent automation
 
----
 
-If you'd like, I can next help you with:
-
-* `agents.yaml` template
-* `tasks.yaml` template
-* or a `requirements.txt` for CrewAI projects
